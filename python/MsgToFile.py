@@ -16,9 +16,9 @@ class MsgToFile(gr.sync_block):
     try:
       # 0 says unbuffered / write immediately
       if (overwrite):
-        self.fp = open(filename,"w",0)
+        self.fp = open(filename,"w")
       else:
-        self.fp = open(filename,"a",0)
+        self.fp = open(filename,"a")
     except Exception as e:
       print("[MsgToFile] Error opening file: %s" % str(e))
       sys.exit(1)
